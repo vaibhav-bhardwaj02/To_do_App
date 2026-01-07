@@ -48,3 +48,65 @@ body {
   color: white;
 }
 
+.tasks {
+  list-style: none;
+  padding: 0;
+}
+
+.tasks li {
+  background: #fde8c8;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tasks li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.tasks input {
+  margin-right: 10px;
+}
+
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+.input-area button {
+  margin-left: 8px;
+  border: none;
+  background: #e59c59;
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.clear-all button{
+  background: #f2c98f;
+  border-radius: 10px;
+  border: none;  
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.cat {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
