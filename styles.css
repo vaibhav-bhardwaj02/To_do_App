@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6d6a8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background: #fff2d8;
+  width: 320px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+}
+
+.date {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.days span {
+  background: #f2c98f;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.days .active {
+  background: #e59c59;
+  color: white;
+}
+
