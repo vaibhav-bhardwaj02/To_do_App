@@ -1,0 +1,38 @@
+const taskInput = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const taskList = document.getElementById("taskList");
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function renderTasks() {
+  taskList.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+
+    if (task.completed) {
+      li.classList.add("completed");
+    }
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = task.completed;
+
+    checkbox.addEventListener("change", () => {
+      task.completed = !task.completed;
+      saveTasks();
+      renderTasks();
+    });
+
+    const text = document.createElement("span");
+    text.textContent = task.text;
+
+    li.appendChild(checkbox);
+    li.appendChild(text);
+    taskList.appendChild(li);
+  });
+}
