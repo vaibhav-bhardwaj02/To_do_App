@@ -48,6 +48,7 @@ body {
   color: white;
 }
 
+
 .tasks {
   list-style: none;
   padding: 0;
@@ -109,4 +110,3 @@ body {
   font-size: 30px;
   margin-top: 15px;
 }
-
