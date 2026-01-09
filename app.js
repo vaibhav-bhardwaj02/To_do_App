@@ -52,4 +52,8 @@ addBtn.addEventListener("click", () => {
 
 renderTasks();
 
-
+document.getElementById("clearBtn").addEventListener("click", () => {
+  localStorage.removeItem("tasks");
+  tasks = [];
+  renderTasks();
+});
