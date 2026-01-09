@@ -36,3 +36,20 @@ function renderTasks() {
     taskList.appendChild(li);
   });
 }
+
+addBtn.addEventListener("click", () => {
+  if (taskInput.value.trim() === "") return;
+
+  tasks.push({
+    text: taskInput.value,
+    completed: false
+  });
+
+  taskInput.value = "";
+  saveTasks();
+  renderTasks();
+});
+
+renderTasks();
+
+
